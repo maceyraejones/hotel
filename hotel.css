@@ -1,0 +1,91 @@
+/* ALL */
+* {
+    font-family: Didot, serif;
+}
+
+body {
+    text-align: center;
+    padding: 50px;
+}
+
+#header {
+    font-size:30px;
+    background-color: #66bb6a;
+    color:white;
+    border: dotted white;
+}
+
+/* TEXTBOXES */
+input {
+    border: 2px dotted rgb(114, 179, 123);
+    border-radius: 25px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }
+
+input:focus {
+    background-color: rgb(114, 179, 123);
+    border: 2px solid rgb(114, 179, 123);
+  }
+
+textarea:focus {
+    background-color: rgb(114, 179, 123);
+    border: 2px solid rgb(114, 179, 123);
+  }
+
+textarea{
+    border: 2px dotted rgb(114, 179, 123);
+    border-radius: 25px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+/* CHECKBOX */
+#checkbox {
+    border-radius: 100%;
+}
+
+  .round label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    left: 0;
+    top: 0;
+    width: 28px;
+  }
+  
+  .round input[type="checkbox"] {
+    visibility: hidden;
+  }
+  
+  .round input[type="checkbox"]:checked + label {
+    background-color: #66bb6a;
+    border-color: #66bb6a;
+  }
+  
+  .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  } 
+
+  /* FOOTER  */
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    background-color:#66bb6a;
+    color: white;
+  }
+
+footer a {
+    text-decoration: none;
+}
+
+#link1, #link2{
+     color: white;
+}
+
+#link1:hover, #link2:hover {
+    color:black;
+ }
