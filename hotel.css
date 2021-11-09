@@ -1,6 +1,7 @@
 /* ALL */
 * {
     font-family: Didot, serif;
+
 }
 
 body {
@@ -19,7 +20,6 @@ body {
 input {
     border: 2px dotted rgb(114, 179, 123);
     border-radius: 25px;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   }
 
 input:focus {
@@ -35,14 +35,28 @@ textarea:focus {
 textarea{
     border: 2px dotted rgb(114, 179, 123);
     border-radius: 25px;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
+
+/* DROPDOWN  */
+
+/* this would not center for anything in the world idk what i did i gave up  */
+#carKind, #carName {
+  width: 300px;
+  border-radius: 25px;
+  border: 2px dotted rgb(114, 179, 123);
+  text-align: center;
+  justify-content: center;
+}
+
 
 /* CHECKBOX */
 #checkbox {
     border-radius: 100%;
 }
 
+:checked {
+  background-color: #66bb6a;
+}
   .round label {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -82,10 +96,10 @@ footer a {
     text-decoration: none;
 }
 
-#link1, #link2{
+#link1, #link2 {
      color: white;
 }
 
 #link1:hover, #link2:hover {
     color:black;
- }
+}
