@@ -16,48 +16,62 @@
 
     <div id="header"> Which Cars Character is Your Favorite?</div>
 
-		<form action="http://www.example.com/review.php" method="get">
+
+		<form action="page.html" method="get">
             <fieldset>
                 <!-- TEXTBOXES -->
 				<legend>Login</legend>
-				<label>Username: <input type="text" name="name" size="30" maxlength="100" placeholder="John"></label><br /> <br>
-				<label>Password:  <input type="password" name="email" size="30" maxlength="100" placeholder="Doe"></label><br /><br>
+				<label>*Username: <input type="text" name="name" size="30" minlength="3" maxlength="10" placeholder="John" required></label><br /> <br>
+				<label>*Password:  <input type="password" name="email" size="30" minlength="6" maxlength="8" placeholder="Doe" required></label><br /><br>
                 </label><br />
             </fieldset>
 
 			<fieldset>
                 <!-- MORE TEXTBOXES -->
 				<legend>Information</legend>
-				<label>Name: <input type="text" name="name" size="30" maxlength="100" placeholder="John Doe"></label><br /> <br>
-				<label>Email: <input type="email" name="email" size="30" maxlength="100" placeholder="johndoe@yahoo.com"></label><br /><br>
+				<label>*Name: <input for="name" type="text" name="name" size="30" minlength="3" maxlength="20" placeholder="John Doe" required></label><br /> <br>
+				<label>*Email: <input type="email" name="email" size="30" minlength="6" maxlength="25" placeholder="johndoe@yahoo.com" required></label><br /><br>
                 <!-- NUMBER INPUT  -->
-                <label>Phone Number: <input type="number" name="phone" size="30" maxlength="100" placeholder="888-123-4567"></label><br /><br>
+                <label>Phone Number: <input type="number" name="phone" size="30" minlength="10" maxlength="11" placeholder="8881234567"></label><br /><br>
                 <!-- DATE AND TIME INPUT -->
-                <label>Date: <input type="date" name="date" size="30" maxlength="100"></label><br /><br>
-                <label>Time: <input type="time" name="time" size="30" maxlength="100"></label><br />
+                <label>*Date: <input type="date" name="date" size="30" minlength="1" maxlength="10" required></label><br /><br>
+                <label>*Time: <input type="time" name="time" size="30" minlength="1" maxlength="10" required></label><br />
             </fieldset><br />
 
-			<fieldset>
-                <!-- DROPDOWN BOX  -->
-				<legend>Pick a Car</legend>
-                <input list="cars" name="car" placeholder="Lightning McQueen">
-                <datalist id="cars">
-                    <option value="Lightning McQueen">
-                    <option value="Mater">
-                    <option value="Doc Hudson">
-                    <option value="Chick Hicks">
-                    <option value="Cal Weathers">
-                </datalist>
-            <input type="submit" class="btn btn-outline-dark">
+
+                  <!-- INPUT TO ANOTHER  -->
+            <br>
+            <fieldset>
+                <div id="carChars">
+                <legend>*Pick a Car</legend>
+                <label for="carKind" class="form-label">Car Type</label>
+                <select id="carKind" class="form-select" type="select" name="carName" >
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Sports Car">Sports Car</option>
+                    <option value="Race Car">Race Car</option>
+                    <option value="Normal Car">Normal Car</option>
+                    <option value="Old Car">Old Car</option>
+                </select>
+                <br>
+                <label for="carName" class="form-label">Car Names</label>
+                <select id="carName" class="form-select" type="select" name="carName" disabled>
+                    <option>Select car type first</option>
+                </select>
+                <br>
+            </div>
+            </fieldset>
+          
 
                 <!-- CHECKBOXES -->
-				<p> <br>
+				<p> <br> 
 					Would you drive this car?<br />
 					<label><input type="radio" name="rating" value="yes" /> Yes</label>
 					<label><input type="radio" name="rating" value="no" /> No</label>
 					<label><input type="radio" name="rating" value="maybe" /> Maybe</label>
 				</p>
 				<p>
+                <br> 
+
                     <!-- ANOTHER TEXTBOX -->
 					<label for="comments">Comments:</label><br />
 					<textarea rows="4" cols="40" id="comments" placeholder="Type here"></textarea>
